@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endogenous-payload-rl"
+version = "0.1.0"
+description = "MuJoCo/MJX experiments for endogenous payload dynamics on Open Duck Mini V2."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "brax>=0.12",
+  "mujoco>=3.3,<4",
+  "mujoco-mjx>=3.3,<4",
+  "pyyaml>=6",
+  "wandb>=0.19",
+]
+
+[project.optional-dependencies]
+cuda12 = ["jax[cuda12]>=0.6"]
+
+[dependency-groups]
+dev = [
+  "pytest>=8",
+  "pytest-cov>=6",
+  "ruff>=0.9",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/endogenous_payload_rl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
