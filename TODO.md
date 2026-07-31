@@ -3,10 +3,28 @@
 ## Setup gate
 
 - [x] Confirm WSL2 can see the NVIDIA GPU.
-- [ ] Confirm `scripts/smoke_test.py` reports a CUDA JAX device.
-- [ ] Run the test suite.
+- [x] Confirm `scripts/smoke_test.py` reports a CUDA JAX device.
+- [x] Run the test suite.
 - [ ] Authenticate W&B with `wandb login`.
 - [x] Create and push the GitHub repository.
+
+## Compute gate
+
+### Step 4: research and document
+
+- [x] Select NVIDIA Brev as the IsaacLab compute provider.
+- [x] Document the target GPU, storage, persistence, cost, and shutdown policy.
+- [x] Keep the local MuJoCo Python 3.11 and remote Isaac Python 3.12 environments separate.
+
+### Step 5: provision and validate
+
+- [ ] Preview Brev capacity and choose the exact 24 GB+ GPU and hourly price.
+- [ ] Provision a stoppable Brev instance with persistent storage.
+- [ ] Create the separate Python 3.12 Isaac environment.
+- [ ] Install compatible Isaac Sim, IsaacLab, PyTorch, CUDA, and RSL-RL versions.
+- [ ] Pass an Isaac smoke test before adding project code.
+- [ ] Authenticate W&B on the Brev instance.
+- [ ] Clone SteadyTray and run one untouched upstream example.
 
 ## Baseline gate
 

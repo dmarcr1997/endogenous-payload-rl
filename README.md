@@ -1,10 +1,12 @@
 # Adaptation vs. Avoidance Under Endogenous Payload Dynamics
 
-MuJoCo/MJX research scaffold for studying endogenous, time-varying payload dynamics on the Open Duck Mini V2.
+Simulation-first research scaffold for studying endogenous, time-varying payload dynamics on the Open Duck Mini V2.
 
 ## Platform
 
-GPU-backed JAX is not supported on native Windows. Use Ubuntu 24.04 under WSL2 for development and training.
+GPU-backed JAX is not supported on native Windows. Use Ubuntu 24.04 under WSL2 for
+local MuJoCo/MJX development and validation. IsaacLab training will use a separate
+Python 3.12 environment on NVIDIA Brev; see [`docs/compute.md`](docs/compute.md).
 
 ## Setup
 
@@ -31,6 +33,7 @@ configuration disables JAX's default GPU-memory preallocation because this machi
 
 ```text
 configs/                         Seeded experiment configuration
+docs/compute.md                  Local/remote compute decision and Isaac setup gate
 models/payload_slider.xml        Minimal 1-DoF endogenous payload model
 scripts/smoke_test.py            MuJoCo, MJX, and GPU verification
 src/endogenous_payload_rl/       Project package
