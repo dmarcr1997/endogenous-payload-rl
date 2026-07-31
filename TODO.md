@@ -6,7 +6,7 @@
 - [ ] Confirm `scripts/smoke_test.py` reports a CUDA JAX device.
 - [ ] Run the test suite.
 - [ ] Authenticate W&B with `wandb login`.
-- [ ] Create and push the GitHub repository.
+- [x] Create and push the GitHub repository.
 
 ## Baseline gate
 
@@ -30,4 +30,3 @@
 - [ ] Evaluate retention, falls, adaptation time, and velocity tracking error.
 - [ ] Produce the friction sweep and adaptation-versus-avoidance analysis.
 - [ ] Complete the sim-only writeup before considering hardware or 2-DoF payloads.
-
